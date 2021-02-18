@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 //		"https://arcadenoecliente.herokuapp.com"
 //})
 @RestController
-@RequestMapping("/api/v1/teste")
+@CrossOrigin(origins = "https://arcadenoecliente.herokuapp.com")
+@RequestMapping("/api/v1/pet")
 public class TestController {
 
 	@GetMapping
