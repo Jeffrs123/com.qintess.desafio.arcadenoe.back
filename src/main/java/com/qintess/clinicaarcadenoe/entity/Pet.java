@@ -2,7 +2,6 @@ package com.qintess.clinicaarcadenoe.entity;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -31,18 +30,27 @@ public class Pet {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	@Column(nullable = false)
 	private String nome;
-	@Column(nullable = false)
-	private String responsavel; 
+	
+	@Column(nullable = true)
+	private String nome2;
+	
+	@Column(nullable = true)
+	private String dono; 
+	
 	@Column(nullable = false)
 	private int idade;
-	@Enumerated(EnumType.STRING)
+	
+//	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private Especie especie;
-	@Enumerated(EnumType.STRING)
+	
+//	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private Raca raca;
+	
 	@OneToMany(fetch = FetchType.LAZY)
 	private List<Atendimento> atendimentos;
 }

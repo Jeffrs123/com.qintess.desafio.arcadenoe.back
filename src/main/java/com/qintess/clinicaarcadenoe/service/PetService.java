@@ -23,10 +23,12 @@ public class PetService {
 
     private final PetMapper petMapper = PetMapper.INSTANCE;
     
-    public MessageResponseDTO createPerson(PetDTO itemDTO) {
+    public MessageResponseDTO create(PetDTO itemDTO) {
+    	System.out.println("objeto antes do toModel " + itemDTO);
         Pet itemToSave = petMapper.toModel(itemDTO);
-
+        System.out.println("itemToSave: " + itemToSave);
         Pet savedItem = petRepository.save(itemToSave);
+        System.out.println("savedItem: " + savedItem);
         return createMessageResponse(savedItem.getId(), "Created pet with ID ");
     }
 

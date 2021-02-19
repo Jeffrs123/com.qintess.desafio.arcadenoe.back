@@ -12,6 +12,6 @@ public interface PetMapper {
 	PetMapper INSTANCE = Mappers.getMapper(PetMapper.class);
 	
 	Pet toModel(PetDTO petDTO);
-
+	
 	PetDTO toDTO(Pet pet);
 }

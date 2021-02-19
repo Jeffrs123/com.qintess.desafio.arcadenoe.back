@@ -23,16 +23,30 @@ import lombok.NoArgsConstructor;
 public class PetDTO {
 
 	private Long id;
+
+	@NotEmpty
+	@Size(min = 2, max = 80)
+	private String dono; 
+	
 	@NotEmpty
 	@Size(min = 2, max = 100)
 	private String nome;
+	
+	@NotEmpty
+	@Size(min = 2, max = 50)
+	private String nome2;
+	
+	
 	@NotEmpty
 	@Size(min = 2, max = 100)
 	private int idade;
+	
 	@Enumerated(EnumType.STRING)
 	private Especie especie;
+	
 	@Enumerated(EnumType.STRING)
 	private Raca raca;
+	
 	@Valid
 	@NotEmpty
 	private List<AtendimentoDTO> atendimentos;
