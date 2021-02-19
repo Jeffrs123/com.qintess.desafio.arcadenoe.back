@@ -21,7 +21,8 @@ import com.qintess.clinicaarcadenoe.service.AtendimentoService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@CrossOrigin(origins = "https://arcadenoecliente.herokuapp.com")
+//@CrossOrigin(origins = "https://arcadenoecliente.herokuapp.com")
+@CrossOrigin(origins = {"http://localhost:4200", "https://arcadenoecliente.herokuapp.com"})
 @RequestMapping("/api/v1/atendimento")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class AtendimentoController {
