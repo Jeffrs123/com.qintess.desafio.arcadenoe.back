@@ -26,16 +26,11 @@ public class PetDTO {
 
 	@NotEmpty
 	@Size(min = 2, max = 80)
-	private String dono; 
+	private String responsavel; 
 	
 	@NotEmpty
 	@Size(min = 2, max = 100)
 	private String nome;
-	
-	@NotEmpty
-	@Size(min = 2, max = 50)
-	private String nome2;
-	
 	
 	@NotEmpty
 	@Size(min = 2, max = 100)
@@ -50,5 +45,6 @@ public class PetDTO {
 	@Valid
 	@NotEmpty
 	private List<AtendimentoDTO> atendimentos;
+	
 
 }

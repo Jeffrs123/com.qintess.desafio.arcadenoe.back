@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -35,19 +33,14 @@ public class Pet {
 	private String nome;
 	
 	@Column(nullable = true)
-	private String nome2;
-	
-	@Column(nullable = true)
-	private String dono; 
+	private String responsavel; 
 	
 	@Column(nullable = false)
 	private int idade;
 	
-//	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private Especie especie;
 	
-//	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private Raca raca;
 	

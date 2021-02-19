@@ -6,6 +6,7 @@ import org.mapstruct.factory.Mappers;
 import com.qintess.clinicaarcadenoe.dto.request.PetDTO;
 import com.qintess.clinicaarcadenoe.entity.Pet;
 
+
 @Mapper
 public interface PetMapper {
 
